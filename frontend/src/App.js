@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 
 import './App.css';
-import Home from './Home';
-import User from './User';
+import Home from './components/Home';
+import User from './components/User';
 
 class App extends Component {
   render() {

@@ -6,10 +6,10 @@ const cors = require("cors");
 const PORT = process.env.PORT || 3001
 const HOSTNAME = process.env.HOST || '127.0.0.1'
 
-//middlewares
+// Middlewares
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json({ extended: true }));
-app.use(cors()); //TODO - Mudar para que nao permita requisicoes de todos os servidores
+app.use(cors());
 
 // Routes
 require("./routers/index")(app);

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { Button } from 'reactstrap';
 
-import logo from './logo.svg';
+import logo from '../logo.svg';
 
 class Home extends Component {
   render() {
@@ -11,6 +12,7 @@ class Home extends Component {
       </header>
       <p className="App-intro">
         To get started, edit <code>src/App.js</code> and save to reload.
+        <Button color="danger">Danger!</Button>
       </p>
     </div>;
   };
