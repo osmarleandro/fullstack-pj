@@ -1,9 +1,15 @@
 const express = require("express");
 const app = express();
 const mongoose = require('mongoose');
+const cors = require("cors");
 
 const PORT = process.env.PORT || 3001
 const HOSTNAME = process.env.HOST || '127.0.0.1'
+
+//middlewares
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json({ extended: true }));
+app.use(cors()); //TODO - Mudar para que nao permita requisicoes de todos os servidores
 
 // Routes
 require("./routers/index")(app);
